@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
-import "./db.js";
+// import "./db.js";
 import stripeRouts from "./routes/stripeRoute.js";
 
 const app = express();
