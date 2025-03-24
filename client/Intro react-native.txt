@@ -1,0 +1,25 @@
+Core components are set of components provided my React Native, which behind the scenes ultilize the platform's native components.
+other core components: View (similar to div), Text (textual children e.g  <h1>), <TextInput> (similar to <input>)
+
+There are a few notable differences between core components and DOM elements. The first difference is that the Text component is the only React Native component that can have textual children. This means that you can't, for example, replace the Text component with the View component in the previous example.
+
+The second notable difference is related to the event handlers. While working with the DOM elements we are used to adding event handlers such as onClick to basically any element such as <div> and <button>. In React Native we have to carefully read the API documentation to know what event handlers (as well as other props) a component accepts. For example, the Pressable component provides props for listening to different kinds of press events. We can for example use the component's onPress prop for listening to press events:
+
+import {Text} from 'react-native';
+
+const Helloworld = props => {
+return <Text>Hello World!</Text>
+}
+
+// Pressable
+
+imort {Text, Pressable, Alert} from "react-native"
+
+const PressableText = props => {
+
+return (
+<Pressable onPress={() => Alert.alert('You pressed the text')}>
+<Text></Text>
+</Pressable>
+
+}
